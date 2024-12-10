@@ -1,0 +1,109 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* Sidebar Styling */
+.container {
+    position: relative;
+    flex: 1;
+}
+
+#sidebar {
+    position: fixed;
+    top: 50%;
+    left: -250px;
+    width: 250px;
+    height: 400px;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    box-sizing: border-box;
+    transition: transform 0.3s, left 0.3s;
+    overflow-y: auto;
+    border-radius: 10px;
+}
+
+#sidebar.visible {
+    left: 0;
+}
+
+#close-sidebar-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+#sidebar-progress-container {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#sidebar-progress-bar {
+    flex: 1;
+    margin: 0 10px;
+}
+
+.main-content {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+    transition: margin-left 0.3s;
+}
+
+/* Song List */
+#song-list {
+    margin: 20px 0;
+}
+
+.song {
+    cursor: pointer;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    background: #333;
+    transition: background 0.3s, border-color 0.3s;
+}
+
+.song:hover {
+    background: #555;
+}
+
+.song.active {
+    border-color: #ff5733; /* Highlighted border for the active song */
+    background: #444;
+}
+
+/* Bottom Controls */
+#bottom-controls {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+#progress-bar {
+    flex: 1;
+    margin: 0 10px;
+}
